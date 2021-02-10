@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContasAPagarRestAPI.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
-    public class ContaController : Controller
+    [ApiController]
+    public class ContasController : Controller
     {
         private readonly IContaRepository _contaRepository;
-        public ContaController(IContaRepository contaRepository)
+        public ContasController(IContaRepository contaRepository)
         {
             _contaRepository = contaRepository;
         }

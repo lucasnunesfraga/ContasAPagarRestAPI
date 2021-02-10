@@ -1,0 +1,37 @@
+<h1>Adicionar Contas a Pagar</h1>
+<form [formGroup]="form" (ngSubmit)="save(form.value)">
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Nome</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="Nome" name="Nome">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Valor Original</label>
+    <div class="col-md-12">
+      <input 
+        class="form-control" 
+        type="number" 
+        placeholder="0.00" 
+        formControlName="ValorOriginal"
+        name="ValorOriginal"
+      >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Data Vencimento</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" placeholder="aaaa-mm-dd" formControlName="DataVencimento" name="DataVencimento">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Data Pagamento</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" placeholder="aaaa-mm-dd" formControlName="DataPagamento" name="DataPagamento">
+    </div>
+  </div> 
+  <div class="form-group">
+    <button type="submit" class="btn btn-success float-right" [disabled]="!form.valid">Salvar</button>
+    <button class="btn btn-secondary float-left" (click)="cancel()">Cancel</button>
+  </div>
+</form>
